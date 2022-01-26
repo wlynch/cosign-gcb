@@ -1,3 +1,3 @@
 steps:
-- name: 'gcr.io/tekton-releases/dogfooding/ko-gcloud'
+- name: 'gcr.io/wlynch-test/ko-gcloud-cosign@sha256:adfbbc4eff4106caf16e92b520940c7a7f3f8ff011c68180b072e8042e4c6df3'
   args: ['./cosign.sh']

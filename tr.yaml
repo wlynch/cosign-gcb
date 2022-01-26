@@ -1,0 +1,14 @@
+kind: TaskRun
+apiVersion: tekton.dev/v1beta1
+metadata:
+  generateName: tr-
+  serviceaccount: build-robot
+spec:
+  taskSpec:
+    steps:
+      - image: gcr.io/wlynch-test/ko-gcloud-cosign@sha256:adfbbc4eff4106caf16e92b520940c7a7f3f8ff011c68180b072e8042e4c6df3
+        script: |
+          git clone https://github.com/wlynch/cosign-gcb.git
+          cd cosign-gcb
+          gcloud auth configure-docker
+          ./cosign.sh
