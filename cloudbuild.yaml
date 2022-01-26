@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/tekton-releases/dogfooding/ko-gcloud'
+  args: ['./cosign.sh']
